@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="5">
             <Label Content="Kapacitás:" FontSize="20" HorizontalAlignment="Center" Margin="15" Foreground="Aqua"></Label>
-            <TextBox x:Name="txtKapacitas" HorizontalContentAlignment="Center" FontSize="15" VerticalContentAlignment="Center" Height="30" Width="80" Text="2000"></TextBox>
+            <TextBox x:Name="txtKapacitas" PreviewTextInput="txtKapacitas_PreviewTextInput" HorizontalContentAlignment="Center" FontSize="15" VerticalContentAlignment="Center" Height="30" Width="80" Text="2000"></TextBox>
             <ComboBox x:Name="cbKapacitas" Margin="15" FontSize="17" Height="30" Width="80">
                 <ComboBoxItem Content="KB"/>
                 <ComboBoxItem Content="MB" Selector.IsSelected="True"/>
