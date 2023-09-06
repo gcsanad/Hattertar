@@ -73,9 +73,11 @@ namespace WpfApp1
                 atviteliSeb *= 1000 * 1000 * 1000;
             }
 
-
-            eredmeny = Math.Round(kapacitas / atviteliSeb, 2);
-            MessageBox.Show($"A folyamat végrehajtása: {eredmeny}sec");
+            
+            eredmeny = Math.Round(kapacitas / atviteliSeb, 3);
+            TimeSpan ido = TimeSpan.FromSeconds(eredmeny);
+            string str = ido.ToString(@"hh\:mm\:ss\:fff");
+            MessageBox.Show($"A folyamat végrehajtása: {str}");
         }
 
     }
