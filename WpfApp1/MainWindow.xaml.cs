@@ -23,6 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            SetBackground();
         }
 
         private void btnSzamol_Click(object sender, RoutedEventArgs e)
@@ -78,6 +79,14 @@ namespace WpfApp1
             TimeSpan ido = TimeSpan.FromSeconds(eredmeny);
             string str = ido.ToString(@"hh\:mm\:ss\:fff");
             MessageBox.Show($"A folyamat végrehajtása: {str}");
+        }
+        private void SetBackground()
+        {
+            BitmapImage bitimg = new BitmapImage();
+            bitimg.BeginInit();
+            bitimg.UriSource = new Uri(@"images\hatter.jpg", UriKind.RelativeOrAbsolute);
+            bitimg.EndInit();
+            this.Background = new ImageBrush(bitimg);
         }
 
     }
