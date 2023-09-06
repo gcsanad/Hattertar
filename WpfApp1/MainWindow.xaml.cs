@@ -28,6 +28,8 @@ namespace WpfApp1
 
         private void btnSzamol_Click(object sender, RoutedEventArgs e)
         {
+            btnSzamol.Background = new SolidColorBrush(Colors.Black);
+            btnSzamol.Foreground = new SolidColorBrush(Colors.Aqua);
             double kapacitas = Convert.ToDouble(txtKapacitas.Text);
             int atviteliSeb = Convert.ToInt32(sldAtviteliseb.Value);
             double eredmeny;
@@ -79,6 +81,8 @@ namespace WpfApp1
             TimeSpan ido = TimeSpan.FromSeconds(eredmeny);
             string str = ido.ToString(@"hh\:mm\:ss\:fff");
             MessageBox.Show($"A folyamat végrehajtása: {str}");
+            btnSzamol.Background = new SolidColorBrush(Colors.LightGray);
+            btnSzamol.Foreground = new SolidColorBrush(Colors.Black);
         }
         private void SetBackground()
         {
